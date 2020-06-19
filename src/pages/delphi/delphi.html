@@ -1,0 +1,154 @@
+<!--
+  Generated template for the DelphiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+      <button ion-button navPop icon-only>
+        <ion-icon name="ios-arrow-back" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title text-center>Delphi</ion-title>
+
+    <ion-buttons right>
+      <button ion-button navPop icon-only>
+        <ion-icon name="more" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="product">
+    <ion-row>
+      <ion-col col-6></ion-col>
+      <ion-col col-6>
+        <div float-right>
+          <div class="d-flex">
+            <p class="sugt-p">Suggestion:</p>
+            <button color="red" ion-button outline *ngIf="sell">Sell</button>
+            <button color="blue" ion-button outline *ngIf="buy">Buy</button>
+            <button color="green" ion-button outline *ngIf="keep">Keep</button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <div class="price-curve">
+      <price-curve [price]="price"></price-curve>
+    </div>
+
+    <div class="shoe-header">
+      <h4>{{ product.name.split(' ').slice(0, 2).join(' ')  }}...</h4>
+      <img [src]="product.images[0].url" class="main-img" alt="" />
+    </div>
+
+    <div class="btns">
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button class="footer-btn">
+            <ion-row>
+              <ion-col class="d-flex">
+                <p class="text">Global<br />Price</p>
+                <p class="line "></p>
+              </ion-col>
+              <ion-col>
+                <p class="price">{{ product.price | currency:'USD':'symbol':'2.2' }}</p>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button ion-button class="footer-btn red-border" *ngIf="sell">
+            <ion-row>
+              <ion-col class="d-flex">
+                <p class="text red">
+                  Future <br />
+                  Price
+                </p>
+                <p class="line red-line"></p>
+              </ion-col>
+              <ion-col>
+                <div class="d-flex price-red">
+                  <h4>{{ pricing.future ?  pricing.future  : '' }}</h4>
+                  <ion-icon name="arrow-dropdown" mode="md"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </button>
+
+          <button ion-button class="footer-btn green-border" *ngIf="buy">
+            <ion-row>
+              <ion-col class="d-flex">
+                <p class="text green">
+                  Future <br />
+                  Price
+                </p>
+                <p class="line green-line"></p>
+              </ion-col>
+              <ion-col>
+                <div class="d-flex price-green">
+                  <h4>{{ product.price | currency:'USD':'symbol':'2.2' }}</h4>
+                  <ion-icon name="arrow-dropup" mode="md"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </button>
+
+          <button ion-button class="footer-btn grey-border" *ngIf="keep">
+            <ion-row>
+              <ion-col class="d-flex">
+                <p class="text grey">
+                  Future <br />
+                  Price
+                </p>
+                <p class="line grey-line"></p>
+              </ion-col>
+              <ion-col>
+                <div class="d-flex price-grey">
+                  <h4>{{ pricing.future ?  pricing.future  : '' }}</h4>
+                  <ion-icon name="remove" mode="md"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div>
+      <ion-item no-lines>
+        <ion-range [min]="4" [max]="15" [step]=".5" (ionChange)="setSize($event)" mode="md">
+          <p range-left class="range-p">Size</p>
+          <p range-right class="range-p">{{ size }}</p>
+        </ion-range>
+      </ion-item>
+
+      <ion-item no-lines>
+        <ion-range [min]="0" [max]="7" (ionChange)="setDay($event)" mode="md">
+          <p range-left class="range-p">Days</p>
+          <p range-right class="range-p">{{ days }}</p>
+        </ion-range>
+      </ion-item>
+    </div>
+  </div>
+
+  <div>
+    <div class="related" *ngIf="relatedProducts">
+      <p class="related-p">Related Products</p>
+      <br />
+
+      <ion-slides [slidesPerView]="2.0" class="slides">
+        <ion-slide *ngFor="let item of relatedProducts">
+          <img [src]="item.images[0].url"  alt="" />
+        </ion-slide>
+
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>

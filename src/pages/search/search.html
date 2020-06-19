@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <div class="searchbar-cont">
+      <input type="text" placeholder="Search" [(ngModel)]="keyword" (keypress)="search()" />
+      <button ion-button clear icon-only (click)="gotoInstasearchPage()">
+        <ion-icon name="customcamera" class="img-camera"></ion-icon>
+      </button>
+    </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="products" *ngIf="products && !searching">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 *ngFor="let product of products">
+          <button ion-item class="product-box" (click)="gotoProductsPage(product)">
+            <p class="muted">{{ product.price | currency:'USD':'symbol':'2.2' }}</p>
+            <img [src]="product.images[0].url"  alt="">
+            <h4 class="product-title">{{ product.name.split(' ').slice(0, 2).join(' ') }}</h4>
+          </button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="d-flex spinning" *ngIf="searching">
+    <!-- Crescent -->
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+</ion-content>

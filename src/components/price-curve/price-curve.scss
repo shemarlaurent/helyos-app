@@ -1,0 +1,19 @@
+price-curve {
+  .knob {
+    height: 25px;
+    width: 25px;
+    background: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    position: absolute;
+    margin-top: 50px;
+    border-radius: 50%;
+  }
+
+  div {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}

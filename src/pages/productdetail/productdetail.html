@@ -1,0 +1,189 @@
+<ion-backdrop
+  *ngIf="drawer || cart"
+  disable-activated
+  role="presentation"
+  tappable
+  style="opacity: 0.5;"
+></ion-backdrop>
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+      <button ion-button navPop icon-only class="arrow-back">
+        <ion-icon name="ios-arrow-back" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>Product Details</ion-title>
+
+    <ion-buttons right>
+      <button ion-button icon-only clear class="cart-btn" (click)="toggleCart()">
+        <img src="assets/icon/cart-grey.png" alt="" />
+        <ion-badge class="cart-badge" color="blue">2</ion-badge>
+      </button>
+      <button ion-button icon-only clear>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+  <div *ngIf="product">
+    <div class="outer-icons">
+      <ion-row>
+        <ion-col col-6>
+          <div class="d-flex">
+            <button ion-button clear icon-only>
+              <ion-icon name="customthumbsup"></ion-icon>
+            </button>
+
+            <button ion-button clear icon-only>
+              <ion-icon name="customthumbsdown"></ion-icon>
+            </button>
+          </div>
+        </ion-col>
+
+        <ion-col col-6>
+          <button ion-button clear icon-only float-right>
+            <ion-icon name="md-globe" class="globe"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="d-flex delphi-title" (click)="goToDelphi(product)">
+      <h3 text-center>{{ product.name.split(' ').slice(0, 2).join(' ')  }}...</h3>
+      <img src="assets/icon/delphi.png" class="delphi-icon" alt="" />
+    </div>
+
+    <div class="det-div">
+      <ion-row class="detail">
+        <ion-col col-4 class="border-right">
+          <h4>{{ product.brand }}</h4>
+        </ion-col>
+
+        <ion-col col-4 class="border-right">
+          <h4>Condition: New</h4>
+        </ion-col>
+
+        <ion-col col-4>
+          <h4>SKU: {{ product.sku.toUpperCase() }}</h4>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-6></ion-col>
+        <ion-col col-6>
+          <button ion-button class="desp-btn">Description...</button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="main-img">
+      <img [src]="product.images[0].url"  alt="" />
+    </div>
+
+    <div>
+      <div class="related" *ngIf="relatedProducts">
+        <p>Related Products</p>
+        <br />
+
+        <ion-slides [slidesPerView]="2.0" class="slides">
+          <ion-slide *ngFor="let item of relatedProducts">
+            <img [src]="item.images[0].url"  alt="" />
+          </ion-slide>
+
+        </ion-slides>
+      </div>
+    </div>
+
+    <div>
+      <ion-slides [slidesPerView]="2.1">
+        <ion-slide>
+          <button (click)="chooseSize()" *ngIf="showDefault" ion-button class="footer-btn size-btn">
+            <ion-row>
+              <ion-col class="d-flex">
+                <p class="text">Size: N/A</p>
+                <p class="line"></p>
+              </ion-col>
+              <ion-col> </ion-col>
+            </ion-row>
+          </button>
+
+          <button (click)="chooseSize()" *ngIf="!showDefault" ion-button class="footer-btn">
+            <ion-row>
+              <ion-col class="d-flex" *ngIf="variation">
+                <p class="text">{{ variation.name }}</p>
+                <p class="line"></p>
+              </ion-col>
+              <ion-col>
+                <p>${{ variation.price }}</p>
+              </ion-col>
+            </ion-row>
+          </button>
+        </ion-slide>
+
+        <ion-slide>
+          <button ion-button class="pay-btn" (click)="toggleDrawer()">
+          <span class="d-flex">
+            <img src="assets/icon/pay.png" alt="" />
+            Pay
+          </span>
+          </button>
+        </ion-slide>
+
+        <ion-slide> </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>
+
+<ion-bottom-drawer
+  *ngIf="drawer"
+  class="drawer"
+  [ngClass]="{'drawer-anim': drawer}"
+  [(state)]="drawerState"
+  dockedHeight="550"
+  disableDrag="true"
+>
+  <div class="drawer-content" padding>
+    <button (click)="toggleDrawer()" class="close-button" ion-button color="light"><ion-icon name="close"></ion-icon></button>
+    <h4 class="sheet-header">Select an Option:</h4>
+    <ion-list no-lines class="img-cont">
+      <button ion-item (click)="openPayPage()">
+        <ion-avatar item-start>
+          <img src="assets/icon/pickyourprice.png" class="pyp" alt="" />
+        </ion-avatar>
+        <h4>Pick Your Price</h4>
+      </button>
+
+      <button ion-item (click)="buyNow()">
+        <ion-avatar item-start>
+          <img src="assets/icon/buyicon.png" class="buy-now" alt="" />
+        </ion-avatar>
+        <h4 class="buy-now-text">Buy Now</h4>
+      </button>
+
+      <button ion-item (click)="addToCart()">
+        <ion-avatar item-start>
+          <img src="assets/icon/addtocart.png" class="add-to-cart" alt="" />
+        </ion-avatar>
+        <h4>Add to Cart</h4>
+      </button>
+
+      <button ion-item (click)="openNebulaPage()">
+        <ion-avatar item-start>
+          <img src="assets/icon/nebulapay.png" class="img-dr" alt="" />
+        </ion-avatar>
+        <h4>Nebula Pay</h4>
+      </button>
+
+      <button ion-item>
+        <ion-avatar item-start>
+          <img src="assets/icon/flex.png" class="img-dr" alt="" />
+        </ion-avatar>
+        <h4>Flex</h4>
+      </button>
+    </ion-list>
+  </div>
+</ion-bottom-drawer>
+<cart [cartDrawer]="cart" (closeCart)="toggleCart()"></cart>

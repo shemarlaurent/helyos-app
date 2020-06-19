@@ -1,0 +1,65 @@
+page-home {
+ .logo {
+     height: 54.45px;
+     margin-left: 12px;
+ }
+ .toolbar-md, .toolbar-ios {
+     min-height: 86px;
+ }
+
+ .cart-badge {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    border-radius: 20px;
+ }
+ .cart-btn {
+     margin-right: 12px;
+ }
+
+ h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 30px;
+    color: #3B3B3B;
+ }
+
+ .muted {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #C4C4C4;
+ }
+
+ .product-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+ }
+
+ .products {
+     img {
+         height: 100px;
+         margin-bottom: 10px;
+     }
+ }
+
+ .item-md.item-block .item-inner, .item-ios .item-block .item-inner {
+     border: none;
+     padding: 0;
+ }
+
+ .item-md, .item-ios {
+     padding: 0;
+ }
+}

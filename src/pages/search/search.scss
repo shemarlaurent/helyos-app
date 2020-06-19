@@ -1,0 +1,128 @@
+page-search {
+  .logo {
+    height: 54.45px;
+    margin-left: 12px;
+  }
+
+  .toolbar-md,
+  .toolbar-ios {
+    min-height: 86px;
+  }
+
+  .toolbar-background-md {
+    background: #fff;
+    border-color: none;
+  }
+
+  .searchbar-cont {
+    margin: 18px;
+    display: flex;
+    border: 2px solid #BBBBBB;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 3px;
+
+    input {
+      border: none;
+      width: 80%;
+      padding-left: 15px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #000000;
+    }
+
+    input::placeholder {
+      color: #BBBBBB;
+    }
+
+    .img-camera {
+      color: #C4C4C4;
+      //   font-weight: 600;
+      // font-size: 35px;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      text-align: center;
+    }
+  }
+
+  .cart-badge {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    border-radius: 20px;
+  }
+
+  .cart-btn {
+    margin-right: 12px;
+  }
+
+  h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+
+    color: #3B3B3B;
+  }
+
+  .muted {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #C4C4C4;
+  }
+
+  .product-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .products {
+    img {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .item-md.item-block .item-inner,
+  .item-ios .item-block .item-inner {
+    border: none;
+    padding: 0;
+  }
+
+  .item-md,
+  .item-ios {
+    padding: 0;
+  }
+
+  .tabs-md,
+  .tabs-ios {
+    display: block !important;
+  }
+
+  div ion-spinner {
+    display: block;
+    margin: auto;
+  }
+  div .spinning {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+
+

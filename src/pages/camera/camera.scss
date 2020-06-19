@@ -1,0 +1,222 @@
+page-camera {
+
+  .toolbar-background-md {
+    border-bottom: none !important;
+  }
+
+  .toolbar-background-ios {
+    border-bottom: none !important;
+  }
+
+  .toolbar-title-md,
+  .toolbar-title-ios {
+    color: #fff !important;
+  }
+
+  .arrow-back {
+    color: #fff;
+  }
+
+  .rate-icon {
+    margin-left: -15px;
+  }
+
+  .content-md,
+  .content-ios {
+    background-color: transparent !important;
+  }
+
+  .correctResult,
+  .incorrectResult {
+    margin-top: 40px;
+  }
+
+  .toolbar-background {
+    background: transparent;
+  }
+
+  .loader {
+    height: 170px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .item-place {
+    padding-top: calc(100vh / 4);
+    text-align: center;
+    width: 100%;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      height: 70px;
+    }
+
+    h2 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28.8916px;
+      line-height: 35px;
+      text-align: center;
+      letter-spacing: 0.348399px;
+      color: #FFFFFF;
+      text-shadow: 0px 6.79803px 13.5961px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .footer-md,
+  .footer-ios {
+    min-height: 00px !important;
+  }
+
+  .btn-circle {
+    padding: 10px !important;
+    margin-left: 20px;
+    margin-top: 35px;
+    border-radius: 50%;
+    height: 50px !important;
+    width: 50px;
+
+    ion-icon {
+      font-size: 25px;
+    }
+  }
+
+  .btn-tap {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .circle-tap {
+    height: 70px;
+    width: 70px;
+    background: transparent;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button-md,
+  .btn-ios {
+    height: auto;
+  }
+
+  @keyframes animatedrawer {
+    0% {
+      transform: translateY(90vh);
+    }
+
+    100% {
+      transform: translateY(60vh);
+    }
+  }
+
+  .drawer-anim {
+    animation-name: animatedrawer;
+    animation-duration: 1s;
+    transition: ease-out;
+    z-index: 9999;
+  }
+
+  .drawer {
+    background-color: #fff;
+    border-radius: 40px 40px 0px 0px;
+
+    .auth-p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18.1754px;
+      line-height: 18px;
+      letter-spacing: -0.151462px;
+      color: #000000;
+    }
+  }
+
+  .tryagain-btn {
+    background: #59D0FF;
+    width: 150px;
+    padding: 15px;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13.6421px;
+    line-height: 16px;
+    letter-spacing: -0.136421px;
+    color: #FFFFFF
+  }
+
+  .results {
+    width: 100%;
+
+    h4 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16.3705px;
+      line-height: 16px;
+      text-align: center;
+      padding: 25px;
+      letter-spacing: -0.136421px;
+      color: #000000;
+    }
+
+    p {
+      color: #000;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      text-align: center;
+      padding: 30px auto;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: -0.136421px;
+    }
+
+    .shoe-loader {
+      -webkit-mask: url('../../assets/icon/side-svg.svg') no-repeat 100% 100%;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      width: 300px;
+      height: 100px;
+      background-color: red;
+    }
+
+    .d-flex {
+      justify-content: stretch;
+    }
+
+    .rating {
+      margin-top: 10px;
+
+      p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13.6421px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: -0.136421px;
+        color: #000000;
+      }
+
+      img {
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+      }
+    }
+  }
+}
+
+
+ion-app.md,
+ion-app.ios,
+.ion-content {
+  background-color: transparent !important;
+}

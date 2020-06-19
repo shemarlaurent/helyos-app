@@ -1,0 +1,71 @@
+page-cards {
+    .label-md, .label-ios {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15.2px;
+        line-height: 19px;
+        color: #C4C4C4;
+    }
+
+    h3 {
+        padding-left: 10px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+    }
+
+    .cont {
+        padding: 10px;
+    }
+
+    ion-icon {
+        color: #C4C4C4;
+        padding-top: 30px;
+    }
+    ion-select {
+        .select-icon {
+          .select-icon-inner {
+             display: none;
+          }
+        }
+      }
+      .toggle-txt {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 17px;
+        color: #000000;
+      }
+
+      .footer-btn {
+        background: #0000FF !important;
+        border-radius: 5px;
+        height: 60px !important;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+      }
+
+      p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        color: #C4C4C4;
+        padding: 14px;
+      }
+      
+      .save {
+          padding-top: 20px;
+      }
+}

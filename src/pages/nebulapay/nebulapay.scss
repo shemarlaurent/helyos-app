@@ -1,0 +1,177 @@
+page-nebulapay {
+
+  .toolbar-background-md {
+    border-bottom: none !important;
+  }
+
+  .toolbar-background-ios {
+    border-bottom: none !important;
+  }
+
+  .vert-align {
+    margin-top: calc(100vh / 4);
+  }
+
+  h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+  }
+
+  .cpd-bg {
+    background: #F8F8F8;
+
+    h4 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      text-align: center;
+      font-size: 12.717px;
+      line-height: 16px;
+      text-transform: uppercase;
+      padding: 15px;
+      color: #000000;
+    }
+
+    margin-bottom: 20px;
+  }
+
+
+
+  input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    width: 60%;
+    text-align: center;
+    border: 0px;
+    border-bottom: 1px solid #C4C4C4;
+    ;
+    padding-bottom: 6px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14.3538px;
+    line-height: 17px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .d-flex {
+    justify-content: stretch;
+  }
+
+  .d-cent-align {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-md,
+  .footer-ios {
+    p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: left;
+      text-transform: unset !important;
+      color: #C4C4C4;
+    }
+
+    .footer-btn {
+      background: #5902CB !important;
+      border-radius: 5px;
+      height: 60px !important;
+      width: 100%;
+
+      span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 35px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+
+        p {
+          text-transform: unset !important;
+        }
+      }
+
+      img {
+        height: 25px;
+        margin-right: 13px;
+        width: 23px;
+      }
+    }
+  }
+
+  .arrow-back {
+    padding-left: 20px !important;
+    margin-top: 10px;
+  }
+
+  .button-clear-md,
+  .button-clear-ios {
+    width: 100%;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .radio-md .radio-icon,
+  .radio-ios .radio-icon {
+    height: 28px !important;
+    width: 28px !important;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .radio-md .radio-inner,
+  .radio-ios .radio-inner {
+    left: 4px !important;
+    top: 4px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .radio-p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12.717px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+
+  .pad-left {
+    padding-left: 20px;
+  }
+
+  .pad-right {
+    padding-right: 20px;
+  }
+}

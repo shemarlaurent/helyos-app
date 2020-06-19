@@ -1,0 +1,105 @@
+page-instasearch {
+
+  .toolbar-background-md {
+    border-bottom: none !important;
+  }
+
+
+
+  .toolbar-background-ios {
+    border-bottom: none !important;
+  }
+
+  .toolbar-title-md,
+  .toolbar-title-ios {
+    color: #fff !important;
+  }
+
+  .arrow-back {
+    color: #fff;
+  }
+
+  .content-md,
+  .content-ios {
+    background-color: transparent !important;
+  }
+
+  .toolbar-background {
+    background: transparent;
+  }
+
+  .loader {
+    height: 170px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .item-place {
+    padding-top: calc(100vh / 4);
+    text-align: center;
+    width: 100%;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      height: 70px;
+    }
+
+    h2 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28.8916px;
+      line-height: 35px;
+      text-align: center;
+      letter-spacing: 0.348399px;
+      color: #FFFFFF;
+      text-shadow: 0px 6.79803px 13.5961px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .footer-md,
+  .footer-ios {
+    min-height: 00px !important;
+  }
+
+  .btn-circle {
+    padding: 10px !important;
+    margin-left: 20px;
+    margin-top: 35px;
+    border-radius: 50%;
+    height: 50px !important;
+    width: 50px;
+
+    ion-icon {
+      font-size: 25px;
+    }
+  }
+
+  .btn-tap {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .circle-tap {
+    height: 80px;
+    width: 80px;
+    background: transparent;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button-md,
+  .btn-ios {
+    height: auto;
+  }
+}
+
+ion-app.md,
+ion-app.ios,
+.ion-content {
+  background-color: transparent !important;
+}

@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title text-center>Plazma</ion-title>
+    <ion-buttons left>
+      <button ion-button navPop icon-only>
+        <ion-icon
+          name="ios-arrow-back"
+          color="primary"
+          class="arrow-back"
+        ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="item-place" *ngIf="showHero">
+    <img src="assets/icon/scan.png" alt="" />
+    <h2>Place the item in the screen</h2>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col col-3>
+      <button
+        ion-button
+        color="blue"
+        class="btn-circle"
+        (click)="openController()"
+      >
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-6>
+      <button class="btn-tap" (click)="takePicture()" ion-button clear>
+        <div class="circle-tap"></div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+
+<ion-bottom-drawer
+  *ngIf="drawer"
+  class="drawer"
+  [shouldBounce]="shouldBounce"
+  [(state)]="drawerState"
+  dockedHeight="500"
+>
+  <div class="drawer-content" padding>
+    <!-- Side sole loader -->
+    <div class="auth" *ngIf="showSideSoleLoader">
+      <img src="assets/imgs/side.gif" alt="" class="loader" />
+      <p text-center class="auth-p">Authenticating ... Please Wait</p>
+    </div>
+
+    <!-- Bottom sole loader-->
+    <div class="auth" *ngIf="showBottomSoleLoader">
+      <img src="assets/imgs/bottom.gif" alt="" class="loader" />
+      <p text-center class="auth-p">Authenticating ... Please Wait</p>
+    </div>
+
+    <!-- Side sole Result-->
+    <div
+      class="results"
+      *ngIf="showSideSoleCorrectResult || showSideSoleIncorrectResult"
+    >
+      <h4 text-center>Results</h4>
+      <div class="correctResult" *ngIf="showSideSoleCorrectResult">
+        <p>Your {{ plazma.name }} have been determined to be {{ plazma.authenticity }}</p>
+        <button class="tryagain-btn">
+          Try Again
+        </button>
+
+        <br />
+        <ion-row class="rating">
+          <ion-col col-2></ion-col>
+          <ion-col col-4>
+            <p>Rate this result:</p>
+          </ion-col>
+          <ion-col col-2>
+            <img src="assets/icon/smile.png"  alt="" />
+          </ion-col>
+          <ion-col col-2>
+            <img src="assets/icon/sad.png" class="rate-icon" alt="" />
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </div>
+
+      <div class="incorrectResult" *ngIf="showSideSoleIncorrectResult">
+        <p>
+          Sorry the item you have sent isn't currently authenticated by our
+          model. More items will be added in the upcoming weeks.
+        </p>
+        <button class="tryagain-btn">
+          Try Again
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom sole Results -->
+    <div
+      class="results"
+      *ngIf="showBottomSoleCorrectResult || showBottomSoleIncorrectResult"
+    >
+      <h4 text-center>Results</h4>
+
+      <div class="correctResult" *ngIf="showBottomSoleCorrectResult">
+        <p *ngIf="plazma.sole === 'new'">
+          Looks like your {{ plazma.name }} soles are clean, but keeping them that way
+          by using some of the products below
+        </p>
+        <p *ngIf="plazma.sole === 'used'">
+          Looks like your {{ plazma.name }} soles are dirty, you donʼt have to keep
+          them that way if you purchase one of the items below
+        </p>
+        <button class="tryagain-btn">
+          Try Again
+        </button>
+      </div>
+
+      <div class="incorrectResult" *ngIf="showBottomSoleIncorrectResult">
+        <p>
+          Sorry the item you have sent isn't currently authenticated by our
+          model. More items will be added in the upcoming weeks.
+        </p>
+        <button class="tryagain-btn">
+          Try Again
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-bottom-drawer>

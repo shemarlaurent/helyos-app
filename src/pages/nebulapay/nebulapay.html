@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+      <button ion-button navPop icon-only>
+        <ion-icon name="close" color="primary" class="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="vert-align">
+    <h3 text-center>Choose the payment span thats best for you</h3>
+
+    <div class="cpd-bg">
+      <h4>Copped by Nov. 23</h4>
+    </div>
+
+    <ion-row>
+      <ion-col col-6>
+        <div class="d-cent-align">
+          <div class="d-flex">
+            <button ion-button clear (click)="decreaseDays()">
+              <img src="assets/icon/addarrow.png" alt="" />
+            </button>
+
+            <div class="inputs">
+              <input type="text" [(ngModel)]="days" />
+              <p class="occurence-text">Days</p>
+              <p></p>
+            </div>
+
+            <button ion-button clear (click)="increaseDays()">
+              <img src="assets/icon/minusarrow.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="d-flex">
+          <button ion-button clear (click)="decreasePayment()">
+            <img src="assets/icon/addarrow.png" alt="" />
+          </button>
+
+          <div class="inputs">
+            <input
+              type="text"
+              [ngModel]="payment | currency:'USD':'symbol':'2.2'"
+              [ngModelOptions]="{updateOn:'blur'}"
+              (ngModelChange)="amount=$event"
+            />
+            <p class="occurence-text">A day</p>
+          </div>
+
+          <button ion-button clear (click)="increasePayment()">
+            <img src="assets/icon/minusarrow.png" alt="" />
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-footer padding>
+  <p class="footer-p">
+    By confirming, you agree to pay the price and the time span above
+  </p>
+  <button ion-button block class="footer-btn" (click)="choosePlan()">
+    <span class="d-flex">
+      <img src="assets/icon/pay.png" alt="" />
+      Confirm Plan
+    </span>
+  </button>
+</ion-footer>

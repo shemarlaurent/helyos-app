@@ -1,0 +1,25 @@
+<ion-tabs>
+  <ion-tab
+    [root]="tab1Root"
+    [tabIcon]="homeicon"
+    (ionSelect)="homeSelected()"
+    tabsHideOnSubPages="true"
+  ></ion-tab>
+  <ion-tab
+    [root]="tab2Root"
+    [tabIcon]="searchicon"
+    (ionSelect)="searchSelected()"
+    tabsHideOnSubPages="true"
+  ></ion-tab>
+  <ion-tab
+    (ionSelect)="openCameraPage()"
+    tabIcon="customcamera"
+    class="camera-tab-icon"
+    tabsHideOnSubPages="true"
+  ></ion-tab>
+  <ion-tab
+    [root]="tab4Root"
+    [tabIcon]="personicon"
+    (ionSelect)="personSelected()"
+  ></ion-tab>
+</ion-tabs>

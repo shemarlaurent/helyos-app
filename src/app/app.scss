@@ -1,0 +1,194 @@
+@import '../theme/fonts';
+
+
+
+.icon-blue {
+  color: #0000FF;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  border-radius: 20px;
+}
+
+.cart-btn {
+  margin-right: 12px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.toolbar-background-md {
+  background-color: #fff;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+.toolbar-background-ios {
+  background-color: #fff;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+
+.tabbar {
+  background: rgba($color: #fff, $alpha: 0.3) !important;
+  mix-blend-mode: normal;
+  height: 60.15px;
+  border: 1px solid #E9E9E9;
+  backdrop-filter: blur(27.0245px);
+}
+
+.tabs-md .tab-button-icon,
+.tabs-ios .tab-button-icon {
+  font-size: 2.8rem !important;
+  color: #C4C4C4 !important;
+}
+
+.camera-tab-icon {
+  font-size: 3.2rem !important;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+
+
+
+.header-md::after,
+.tabs-md[tabsPlacement="top"]>.tabbar::after,
+.footer-md::before,
+.tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+  display: none;
+}
+
+.header-ios::after,
+.tabs-ios[tabsPlacement="top"]>.tabbar::after,
+.footer-ios::before,
+.tabs-ios[tabsPlacement="bottom"]>.tabbar::before {
+  display: none;
+}
+
+.arrow-back {
+  padding-left: 20px !important;
+  // margin-top: 10px;
+}
+
+.more-btn {
+  font-size: 27px !important;
+  padding-left: 10px;
+}
+
+.title-md,
+.title-ios {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  color: #000000;
+  margin-right: 25px;
+}
+
+.ion-ios-customhome,
+.ion-md-customhome {
+  content: url(../../assets/icon/home.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customhomeoffset,
+.ion-md-customhomeoffset {
+  content: url(../../assets/icon/homeoffset.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customsearch,
+.ion-md-customsearch {
+  content: url(../../assets/icon/search.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customsearchoffset,
+.ion-md-customsearchoffset {
+  content: url(../../assets/icon/searchoffset.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customcamera,
+.ion-md-customcamera {
+  content: url(../../assets/icon/camera.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+}
+
+
+.ion-ios-custompersonoffset,
+.ion-md-custompersonoffset {
+  content: url(../../assets/icon/personoffset.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customperson,
+.ion-md-customperson {
+  content: url(../../assets/icon/person.png);
+  width: 32px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customthumbsup,
+.ion-md-customthumbsup {
+  content: url(../../assets/icon/thumbup.png);
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  // padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+.ion-ios-customthumbsdown,
+.ion-md-customthumbsdown {
+  content: url(../../assets/icon/thumbdown.png);
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-left: -15px;
+  // padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+
+
+ion-header {
+  z-index: 2 !important;
+}
+
+ion-backdrop {
+  z-index: 4 !important;
+}
+
+
+.slider-bar {
+  margin: 10px auto;
+  display: block;
+}

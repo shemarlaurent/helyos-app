@@ -1,0 +1,62 @@
+page-size {
+
+    .toolbar-background-md {
+        border-bottom: none !important;
+   }
+
+   .toolbar-background-ios {
+        border-bottom: none !important;
+   }
+
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 30px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .top-border {
+        border-top: 1px solid #C4C4C4;
+    }
+
+    ion-row {
+        border-bottom: 1px solid #C4C4C4;
+    }
+  .bottom-border {
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+    .right-border {
+        border-right: 1px solid #c4c4c4;
+    }
+    .size-tile {
+        height: 150px;
+        display: block;
+        width: 100%;
+        div {
+            text-align: center;
+
+            h1 {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 42px;
+                color: #000000;
+            }
+        }
+    }
+
+    .price {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: #0000FF;
+    }
+}

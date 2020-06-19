@@ -1,0 +1,20 @@
+cart-icon {
+
+  .cart-badge {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    border-radius: 20px;
+  }
+  .cart-btn {
+    margin-right: 12px;
+
+    img {
+      height: 22px !important;
+    }
+  }
+  ion-icon {
+    color: #a9a9a9;
+    font-size: 30px !important;
+  }
+}

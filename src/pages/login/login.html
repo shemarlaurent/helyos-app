@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+      <ion-buttons left>
+        <button ion-button navPop icon-only>
+          <ion-icon name="close" color="primary" class="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <img src="assets/imgs/logo.png" class="logo" alt="">
+  <h3>The new way to buy and sell authentic streetwear</h3>
+
+  <div class="form">
+      <ion-item>
+        <ion-label stacked>Email </ion-label>
+        <ion-input type="text" required [(ngModel)]="credentials.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input required type="password" [(ngModel)]="credentials.password"></ion-input>
+        <ion-icon name="ios-eye" class="icon-blue" item-right></ion-icon>
+      </ion-item>
+
+      <button ion-button class="btn" block (click)="login()">Login</button>
+  </div>
+</ion-content>
+
+
+<ion-footer padding>
+  <p class="muted"> Don't have an Account?</p>
+  <button ion-button clear block class="btn_underlined" (click)="signup()">Sign Up Now</button>
+</ion-footer>

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+      <ion-buttons left>
+        <button ion-button navPop icon-only>
+          <ion-icon name="ios-arrow-back" color="primary"></ion-icon>
+        </button>
+      </ion-buttons>
+
+      <ion-title text-center>Account</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <br>
+  <h3 text-center>General</h3>
+  <ion-list no-lines>
+    <button ion-item  clear class="btn-line" (click)="toggleAccount()">
+      <ion-avatar item-start>
+        <img src="assets/icon/account.png" alt="">
+      </ion-avatar>
+      <h4>Account</h4>
+      <ion-icon [name]="showAccount ? 'ios-arrow-up' : 'ios-arrow-down'" item-end></ion-icon>
+    </button>
+
+    <div class="btn-link"  *ngIf="showAccount">
+      <button (click)="changeAccount()" ion-button clear>Change Information</button>
+    </div>
+
+    <button ion-item  clear class="btn-line" (click)="toggleMembership()">
+        <ion-avatar item-start>
+          <img src="assets/icon/membership.png" alt="">
+        </ion-avatar>
+        <h4>Membership</h4>
+        <ion-icon [name]="showMembership ? 'ios-arrow-up' : 'ios-arrow-down'" item-end></ion-icon>
+    </button>
+
+    <div class="btn-link"  *ngIf="showMembership">
+        <button ion-button clear>Review Membership</button>
+    </div>
+
+
+    <div class="btn-link"  *ngIf="showMembership">
+        <button ion-button clear>Cancel Membership</button>
+    </div>
+
+
+    <div class="btn-link"  *ngIf="showMembership">
+        <button ion-button clear>Become Membership</button>
+    </div>
+
+  </ion-list>
+</ion-content>

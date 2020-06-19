@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+      <ion-buttons left>
+        <button ion-button navPop icon-only>
+          <ion-icon name="ios-arrow-back" color="primary"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title text-center>Add Address</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="cont" *ngIf="userData">
+      <ion-item>
+          <ion-label floating>Country or Region </ion-label>
+          <ion-select type="text" *ngIf="countryList" [(ngModel)]="userData.country">
+            <ion-option *ngFor="let countryName of countryList">{{ countryName }}</ion-option>
+          </ion-select>
+          <ion-icon name="ios-arrow-forward"  item-end></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>First Name </ion-label>
+            <ion-input type="text" [ngModel]="userData.first_name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Last Name </ion-label>
+            <ion-input type="text" [ngModel]="userData.last_name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Street Address </ion-label>
+            <ion-input type="text" [ngModel]="userData.address1"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Street Address 2 </ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>City </ion-label>
+            <ion-input type="text" [ngModel]="userData.city"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>State</ion-label>
+            <ion-input type="text" [ngModel]="userData.state"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Zip Code</ion-label>
+            <ion-input type="text" [ngModel]="userData.zip_code"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Phone Number</ion-label>
+            <ion-input type="text" [ngModel]="userData.phone"></ion-input>
+        </ion-item>
+
+        <ion-item no-lines class="save">
+            <ion-label class="toggle-txt">Save as primary address</ion-label>
+            <ion-toggle mode="ios" color="blue" checked="true"></ion-toggle>
+      </ion-item>
+      <p>
+          This is the address your packages will be sent to, please be sure the information is correct.
+      </p>
+  </div>
+</ion-content>
+
+<ion-footer padding>
+  <button (click)="updateDetails()" class="footer-btn" ion-button>Add</button>
+</ion-footer>

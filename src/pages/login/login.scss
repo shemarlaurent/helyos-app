@@ -1,0 +1,82 @@
+page-login {
+    .toolbar-background-md {
+        border-bottom: none !important;
+   } 
+   
+   .toolbar-background-ios {
+        border-bottom: none !important;
+   }
+    .logo {
+        width: 186.47px;
+        height: 90.45px;
+        margin: calc(100vh / 6) auto 10px auto;
+        display: block;
+    }
+
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    .form {
+        margin-top: 20px;
+
+        ion-label {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 12px;
+            color: #3B3B3B;
+        }
+
+        .btn {
+            height: 45px;
+            font-family: 'Montserrat';
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            /* identical to box height */
+            color: #FBFBFB;
+            background: #0000FF;
+            border-radius: 5px;
+            margin: 30px auto 10px auto;
+            display: block;
+        }
+    }
+
+    .muted {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #5C636E;
+        text-align: center;
+    }
+
+    .btn_underlined {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: capitalize;
+        /* identical to box height */
+
+        text-decoration-line: underline;
+
+        color: #3B3B3B;
+    }
+
+    .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        display: none;
+    }
+}

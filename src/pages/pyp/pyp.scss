@@ -1,0 +1,144 @@
+page-pyp {
+
+  .toolbar-background-md {
+    border-bottom: none !important;
+  }
+
+  .toolbar-background-ios {
+    border-bottom: none !important;
+  }
+
+  h3 {
+    padding-top: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+
+  .cont {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+
+    div {
+      align-items: center;
+      justify-content: center;
+
+      .sup {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 44px;
+        color: #C4C4C4;
+      }
+
+      input {
+        font-family: 'Montserrat';
+        width: 120px;
+        padding: 0;
+        max-width: 350px;
+        font-style: normal;
+        text-align: center;
+        // display: block;
+        // margin:0 auto;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 78px;
+        color: #C4C4C4;
+        border: 0px;
+        background: transparent;
+      }
+    }
+  }
+
+  .footer-btn {
+    background: #0000FF !important;
+    border-radius: 5px;
+    height: 60px !important;
+    width: 100%;
+
+    span {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      text-transform: capitalize;
+      color: #FFFFFF;
+    }
+
+    img {
+      height: 28px;
+      margin-right: 10px;
+      width: 25px;
+    }
+  }
+
+  .footer-p {
+    text-transform: capitalize !important;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    line-height: 17px;
+    color: #C4C4C4;
+  }
+
+  .calculator {
+    margin-top: 50px;
+    width: 100%;
+    border-top: 1px solid #C4C4C4;
+
+    .dot {
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      text-align: center;
+      background: #000;
+      margin-top: 18px;
+    }
+
+    ion-row {
+      border-bottom: 1px solid #C4C4C4;
+    }
+
+    .border-right {
+      border-right: 1px solid #c4c4c4;
+    }
+
+
+
+    .cal-btn {
+      height: 80px;
+      display: block;
+      width: 100%;
+
+      div {
+        text-align: center;
+
+        h1 {
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 42px;
+          text-align: center;
+          color: #000000;
+        }
+
+        img {
+          height: 30px;
+        }
+      }
+    }
+
+  }
+}

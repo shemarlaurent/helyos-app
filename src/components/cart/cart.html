@@ -1,0 +1,73 @@
+<button ion-button icon-only clear class="cart-btn" (click)="toggleCartDrawer()">
+  <img src="assets/icon/cart-grey.png" alt="" />
+  <ion-badge class="cart-badge" color="blue">2</ion-badge>
+</button>
+<ion-bottom-drawer
+  *ngIf="cartDrawer"
+  class="cartDrawer"
+  [ngClass]="{'drawer-anim': animateCartdrawer}"
+  [(state)]="drawerState"
+  [shouldBounce]="shouldCartBounce"
+  dockedHeight="750"
+  disableDrag="true"
+>
+  <div class="cart-content">
+    <img src="assets/icon/slider-bar.png" class="slider-bar" alt="" />
+    <div class="d-flex cart-header">
+      <h4 padding class="cart">Cart</h4>
+      <button (click)="toggleCartDrawer()" class="close-button" ion-button color="light"><ion-icon name="close"></ion-icon></button>
+    </div>
+    <ion-list lines>
+      <ion-item-sliding *ngFor="let item of items">
+        <ion-item>
+          <ion-row padding>
+            <ion-col col-5>
+              <img [src]="item.product.images[0].url" alt="" />
+            </ion-col>
+            <ion-col col-7>
+              <p class="p-sm">{{ item.size }}</p>
+              <p class="p-md">{{ item.product.name.split(' ').slice(0, 2).join(' ') }}</p>
+              <p class="p-strong">{{ item.price }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="danger" (click)="removeItem(item)">
+            Remove
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <p class="muted">
+      The cart does not guarantee reservations and prices may vary, purchase as
+      soon as possible.
+    </p>
+
+    <div class="div-chk-btn">
+      <button ion-button block color="blue" class="chk-btn" (click)="checkout()">
+        Go to Checkout
+      </button>
+    </div>
+
+    <div class="div-more-items">
+      <h4>More Items</h4>
+    </div>
+
+    <div class="div-slides">
+      <ion-slides [slidesPerView]="2.4" class="slides">
+        <ion-slide>
+          <img src="assets/imgs/product1.png" alt="" />
+          <p>Product Name</p>
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/product2.png" alt="" />
+          <p>Product Name</p>
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/product3.png" alt="" />
+          <p>Product Name</p>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</ion-bottom-drawer>

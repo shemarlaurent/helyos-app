@@ -1,0 +1,38 @@
+page-thankyou {
+    
+    .toolbar-background-md {
+        border-bottom: none !important;
+   } 
+   
+   .toolbar-background-ios {
+        border-bottom: none !important;
+   }
+   
+    .vert-align {
+        padding-top: calc(100vh / 5);
+
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #0000FF;
+        }
+
+        .img-circle {
+          
+            img {
+                height: 100px;
+                width: 100px;
+                padding: 20px;
+                display: block;
+                margin: 0 auto;
+                border-radius: 50%;
+                border: 3px solid #0000FF;
+            }
+        }
+    }
+}
